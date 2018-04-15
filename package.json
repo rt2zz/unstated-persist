@@ -1,0 +1,27 @@
+{
+  "name": "unstated-persist-parent",
+  "version": "0.0.1",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 0",
+    "lint": "eslint packages"
+  },
+  "lint-staged": {
+    "*.{js,css}": [
+      "prettier --write",
+      "git add"
+    ]
+  },
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "babel-eslint": "^8.2.3",
+    "eslint": "^4.19.1",
+    "eslint-plugin-flowtype": "^2.46.2",
+    "eslint-plugin-import": "^2.11.0",
+    "husky": "^0.14.3",
+    "lint-staged": "^7.0.4",
+    "prettier": "^1.12.0"
+  }
+}

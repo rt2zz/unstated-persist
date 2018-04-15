@@ -1,0 +1,19 @@
+parser: babel-eslint
+
+env:
+  browser: true
+  node: true
+  es6: true
+
+extends:
+- plugin:eslint-plugin-import/warnings
+- plugin:eslint-plugin-import/errors
+
+plugins:
+- flowtype
+
+rules:
+  no-undef: 2
+  no-unused-vars: [2, {vars: all, args: none, ignoreRestSiblings: true}]
+  flowtype/boolean-style: [2, "boolean"]
+  flowtype/require-valid-file-annotation: [2, "always"]
