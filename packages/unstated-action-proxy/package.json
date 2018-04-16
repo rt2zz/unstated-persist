@@ -1,0 +1,29 @@
+{
+  "name": "unstated-action-proxy",
+  "version": "0.0.1",
+  "description": "",
+  "main": "lib/unstated-action-proxy.js",
+  "module": "lib/unstated-action-proxy.es.js",
+  "scripts": {
+    "build": "rollup -c && flow-copy-source src lib",
+    "clean": "rm -rf lib",
+    "prepublish": "yarn clean && yarn build",
+    "test": "echo \"Error: no test specified\" && exit 0"
+  },
+  "author": "",
+  "license": "MIT",
+  "dependencies": {
+    "tickedoff": ">=1.0.0",
+    "unstated": ">=2.0.0"
+  },
+  "devDependencies": {
+    "babel-core": "^6.26.0",
+    "babel-preset-env": "^1.6.1",
+    "babel-preset-flow": "^6.23.0",
+    "flow-bin": "^0.69.0",
+    "flow-copy-source": "^1.3.0",
+    "prop-types": "^15.6.1",
+    "rollup": "^0.57.1",
+    "rollup-plugin-babel": "^3.0.3"
+  }
+}
