@@ -1,9 +1,10 @@
 {
   "name": "unstated-action-proxy",
-  "version": "0.0.1",
+  "version": "0.0.2",
   "description": "",
   "main": "lib/unstated-action-proxy.js",
   "module": "lib/unstated-action-proxy.es.js",
+  "files": ["lib"],
   "scripts": {
     "build": "rollup -c && flow-copy-source src lib",
     "clean": "rm -rf lib",

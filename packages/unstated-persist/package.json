@@ -1,10 +1,11 @@
 {
   "name": "unstated-persist",
-  "version": "0.0.1",
+  "version": "0.0.3",
   "description": "",
   "main": "lib/unstated-persist.js",
   "module": "lib/unstated-persist.es.js",
   "types": "lib/unstated-persist.d.ts",
+  "files": ["lib"],
   "scripts": {
     "build": "rollup -c && flow-copy-source src lib && cp src/unstated-persist.d.ts lib/unstated-persist.d.ts",
     "clean": "rm -rf lib",
