@@ -49,4 +49,4 @@ export class PersistContainer<State: Object> extends Container<State> {
   }
 }
 
-export const isBoostrapped = (container: Container<*>) => container.state._persist_version !== undefined
+export const isBootstrapped = (container: Container<*>) => container.state._persist_version !== undefined
