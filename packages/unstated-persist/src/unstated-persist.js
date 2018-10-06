@@ -31,6 +31,8 @@ export class PersistContainer<State: Object> extends Container<State> {
             if (process.env.NODE_ENV !== 'production') console.log('unstated-persist: state version mismatch, skipping rehydration')
             this.setState(persistStatePartial)
           } else this.setState(incomingState) // state versions match, set state as is
+        } else {
+          this.setState(persistStatePartial)
         }
       } catch (err) {
         this.setState(persistStatePartial)
@@ -49,4 +51,4 @@ export class PersistContainer<State: Object> extends Container<State> {
   }
 }
 
-export const isBoostrapped = (container: Container<*>) => container.state._persist_version !== undefined
+export const isBootstrapped = (container: Container<*>) => container.state._persist_version !== undefined
