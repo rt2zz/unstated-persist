@@ -29,13 +29,13 @@ export class PersistContainer<State: Object> extends Container<State> {
           // @NOTE no migrations yet, just clear state. Can be added later with similar api to redux-persist.
           if (incomingState._persist_version !== config.version) {
             if (process.env.NODE_ENV !== 'production') console.log('unstated-persist: state version mismatch, skipping rehydration')
-            this.setState(persistStatePartial)
-          } else this.setState(incomingState) // state versions match, set state as is
+            await this.setState(persistStatePartial)
+          } else await this.setState(incomingState) // state versions match, set state as is
         } else {
-          this.setState(persistStatePartial)
+          await this.setState(persistStatePartial)
         }
       } catch (err) {
-        this.setState(persistStatePartial)
+        await this.setState(persistStatePartial)
         if (process.env.NODE_ENV !== 'production') console.log("err during rehydate", err);
       } finally {
         // dont start persisting until rehydration is complete
