@@ -6,7 +6,7 @@ type PersistConfig = {
   storage: any, // @TODO add storage typing
 }
 
-export class PersistContainer<State extends object> extends Container{
+export class PersistContainer<State extends object> extends Container<State> {
   persist: PersistConfig
 }
 
